@@ -6,7 +6,8 @@ import appConfig from "./appConfig.json"
 import SearchAppBar from './components/SearchAppBar';
 import axios from 'axios';
 import { useState } from 'react';
-import Card2 from './components/Card2';
+//import Card2 from './components/Card2';
+import Card2 from './components/CardMirko'
 
 export default function App() {
 

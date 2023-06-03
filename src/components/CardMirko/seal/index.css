@@ -1,0 +1,56 @@
+    /* seal */
+    .seal {
+
+        box-sizing: border-box;
+    
+        /* Auto layout */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 15px 0px;
+        gap: 10px;
+    
+        position: absolute;
+        width: 150px;
+        height: 150px;
+
+        left: -73.11px;
+        bottom: -66px;
+        /*left: -15px;
+        bottom: 190px;*/
+    
+        /*border: 5px solid #008adb;*/
+        border-radius: 150px;
+        transform: rotate(15deg);
+    
+    
+    }
+    
+    /* seal-icon */
+    .seal-icon {
+    
+        width: 120px;
+        height: 130px;
+    
+        font-family: 'sans-serif';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    
+        /*color: #0164ac;*/
+    
+        transform: rotate(0deg);
+    
+        /* Inside auto layout */
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 1;
+    
+    
+    }

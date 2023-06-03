@@ -1,0 +1,198 @@
+/* card */
+.card {
+
+    /* Auto layout */
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 20px;
+    
+    position: relative;
+    width: 370px;
+    height: 680px;
+    */
+    background: radial-gradient(72.48% 56.44% at 54.1% 48.1%, rgba(255, 255, 255, 0.2) 74.5%, rgba(105, 170, 201, 0.288) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #F4FFFF;    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    
+    
+    }
+    /* addressee */
+    .addressee {
+    
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0px 0px;
+    
+    width: 228px;
+    height: 103px;
+    
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    
+    
+    }
+    /* studentName */
+    .studentName {
+    
+    width: 300px;
+    height: 43px;
+    
+    font-family: 'M PLUS 1';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 43px;
+    padding-top: 15px;
+    
+    color: #000000;
+    text-align: center;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    
+    
+    }
+    /* department */
+    .department {
+    
+    width: 300px;
+    height: 25px;
+    
+    font-family: 'M PLUS 1';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 25px;
+    /* identical to box height */
+    
+    color: #000000;
+    text-align: center;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    
+    
+    }
+    /* imageFrame */
+    .imageFrame {
+    
+    width: 340px;
+    height: 300px;
+    
+    background: #FFFFFF;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    
+    
+    }
+    /* message */
+    .message {
+    
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    
+    /*width: 340px;
+    height: 200px;*/
+    
+    
+    /* Inside auto layout */
+    flex: center;
+    order: 2;
+    flex-grow: 0;
+    
+    
+    }
+    /* content */
+    .content {
+    
+    width: 340px;
+    height: 161px;
+    
+    font-family: 'M PLUS 1';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+    display: inline-grid;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 1;
+    }
+    
+    /* sender */
+    .sender {
+    /*width: 340px;
+    height: 29px;*/
+    
+    font-family: 'M PLUS 1';
+    font-style: normal;
+    /*font-weight: 400;*/
+    font-size: 18px;
+    /*line-height: 22px;*/
+    text-align: right;
+    color: #000000;
+    
+    /* Inside auto layout */
+    flex: none;
+    /*order: 1;*/
+    align-self: stretch;
+    flex-grow: 0;
+    }
+
+    .seal2{
+        box-sizing: border-box;
+
+        /* Auto layout */
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        gap: 10px;
+
+        position: absolute;
+        width: 172.5px;
+        height: 172.5px;
+
+        border: 2px solid #000000;
+        border-radius: 150px;
+        /*transform: rotate(21.6deg);*/
+    }
+
+
+.stamp {
+    box-sizing: border-box;
+    position: absolute;
+    width: 232px;
+    height: 297px;
+    right: 0px;
+    margin: 0px;
+    padding: 0 10px 13px 0;
+    /*top: 38px;*/
+    /* border: 1px solid #000000; */
+}
+    
