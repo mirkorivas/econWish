@@ -2,7 +2,6 @@ import './index.css'
 import Image from 'mui-image'
 import Seal from './seal'
 import Stamp from './stamp'
-import SealEagle2Red from './seal/img/stampEagle2Red.svg'
 import stampEagle2Black from './seal/img/stampEagle2Black.svg'
 import EagleBrown from './seal/img/EagleBrown.svg'
 import EagleLightBlue from './seal/img/EagleLightBlue.svg'
@@ -11,15 +10,12 @@ import EagleLightViolet from './seal/img/EagleLightViolet.svg'
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
-import CardHeader from '@mui/material/CardHeader';
-import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShareIcon from '@mui/icons-material/Share';
@@ -28,6 +24,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import CloseIcon from '@mui/icons-material/Close';
 import { Box, Button, Container, Stack, TableContainer } from '@mui/material'
 import { BorderAll, BorderBottom, BorderClear } from '@mui/icons-material'
+
 
 
 
@@ -48,7 +45,7 @@ export default function Card2({ user }) {
     const { name, grade, imgSrc, wish, id } = user 
     const date = '06/2023'
     const sender = 'Mirko Rivas'
-
+    
     const [imageFull, setImageFull] = React.useState(false);
     const handleImageFullClick = () => {
       setImageFull(!imageFull);
@@ -56,7 +53,8 @@ export default function Card2({ user }) {
 
     var cardContent = imageFull ? 
     <CardImgFull imgSrc={imgSrc} onClick={handleImageFullClick} /> :
-    <CardNormal id={id} imgSrc={imgSrc} name={name} grade={grade} wish={wish} date={date} sender={sender} onClick={handleImageFullClick} />
+    //Here Math.floor(Math.random() * 3) + 1 could be used to have a random seal style, but it changes everytime the data is loaded, can't fix it
+    <CardNormal id={id} imgSrc={imgSrc} name={name} grade={grade} wish={wish} date={date} sender={sender} sealStyle={1} onClick={handleImageFullClick} />
     
   
     return (
@@ -79,13 +77,13 @@ export default function Card2({ user }) {
   }
 
   //Add a button to the image without changing the current layout
-  function StampSeal({ imgSrc, seal, onClick }) {
+  function StampSeal({ imgSrc, seal, onClick, sealStyle}) {
     return (
       <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: 1 }}>
         <div className="imageFrame">
             <div className="stamp">
                 <Image src={imgSrc} alt="image" duration={0} onClick={onClick}/>
-                <Seal imgSrc={seal}/>
+                <Seal imgSrc={seal} sealStyle={sealStyle}/>
             </div>
         </div>
       </Box>
@@ -133,7 +131,7 @@ export default function Card2({ user }) {
     )
   }
 
-  function CardNormal({id, imgSrc, wish, date, name, grade, sender, onClick }) {
+  function CardNormal({id, imgSrc, wish, date, name, grade, sender, sealStyle, onClick }) {
     const [expanded, setExpanded] = React.useState(false);
     const handleExpandClick = () => {
       setExpanded(!expanded);
@@ -155,11 +153,11 @@ export default function Card2({ user }) {
       }
     };
     
-
+    //Still need to figure out what to do with the share button
     return (
       <div>
         <Addressee name={name} grade={grade}/>
-        <StampSeal imgSrc={imgSrc} seal={EagleLightBlue} onClick={onClick}/>
+        <StampSeal imgSrc={imgSrc} seal={EagleLightBlue} sealStyle={sealStyle} onClick={onClick}/>
         <CardActions disableSpacing>
         <IconButton 
           
@@ -176,6 +174,7 @@ export default function Card2({ user }) {
           <ExpandMore
             expand={expanded}
             onClick={handleExpandClick}
+            style={{outline:"none"}}
             aria-expanded={expanded}
             aria-label="show more"
           >
