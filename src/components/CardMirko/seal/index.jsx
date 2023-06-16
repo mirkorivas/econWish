@@ -9,7 +9,7 @@ export default function Seal({imgSrc, sealStyle}) {
     //random number between 1 and 5 //NOW NUMBER DEFINED IN CARDMIRKO index.jsx
     //const randomNumber = Math.floor(Math.random() * 3) + 1;
     //5 different styles for the seal
-    let style = {}; 
+    /*let style = {}; 
     switch(sealStyle){
         case 1:
             style = {left: '160px', bottom: '-30px', transform: 'rotate(-5deg)'};
@@ -20,9 +20,9 @@ export default function Seal({imgSrc, sealStyle}) {
         case 3:
             style = {left: '175px', bottom: '-40px', transform: 'rotate(-5deg)'};
             break;
-    }
+    }*/
   return (
-    <div className="seal" style={style}>
+    <div className="seal" style={sealStyle}>
         <div className="seal-icon"><img src={imgSrc}/></div>
     </div>
   )

@@ -12,11 +12,14 @@
     width: 370px;
     height: 680px;
     */
-    background: radial-gradient(72.48% 56.44% at 54.1% 48.1%, rgba(255, 255, 255, 0.2) 74.5%, rgba(105, 170, 201, 0.288) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #F4FFFF;    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    background: radial-gradient(72.48% 56.44% at 54.1% 48.1%, rgba(255, 255, 255, 0.2) 74.5%, rgba(105, 171, 201, 0.104) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #F4FFFF;    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
-    
-    
+    /*background-image: url('./img/bg2.svg');*/
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size: fill;
     }
+
     /* addressee */
     .addressee {
     
@@ -123,7 +126,7 @@
     .content {
     
     width: 340px;
-    height: 161px;
+    /*height: 100px;*/
     
     font-family: 'M PLUS 1';
     font-style: normal;

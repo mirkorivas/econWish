@@ -30,12 +30,12 @@
     /* seal-icon */
     .seal-icon {
     
-        width: 120px;
-        height: 130px;
+        width: 150px;
+        height: 150px;
     
         font-family: 'sans-serif';
         font-style: normal;
-        font-weight: 600;
+        font-weight: 400;
         font-size: 22px;
         line-height: 24px;
         display: flex;
@@ -50,7 +50,6 @@
         flex: none;
         order: 0;
         align-self: stretch;
-        flex-grow: 1;
-    
+        flex-grow: 1;  
     
     }

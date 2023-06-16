@@ -88,14 +88,16 @@ function AppContent({ users }) {
             }
         )
     })
-    const cards = users.map((e, i) => {
-        return (
-            <GalleryItem key={i}>
-                <Card2 user={e} />
-                {/* <Item sx={{height: "300px"}}/> */}
-                {/* <Card user={e} style={style}/>   */}
-            </GalleryItem>
-        )
+    const cards = users.map((e, i) => { 
+        if (!Object.values(e).includes(null) && !Object.values(e).includes(undefined) && !Object.values(e).includes('') && !Object.values(e).includes(' ')) {
+            return (
+                <GalleryItem key={i}>
+                    <Card2 user={e} />
+                    {/* <Item sx={{height: "300px"}}/> */}
+                    {/* <Card user={e} style={style}/>   */}
+                </GalleryItem>
+            )
+        }
     })
     return (
         <>
@@ -112,8 +114,6 @@ function AppContent({ users }) {
                 <SearchAppBar autocompleteOptions={window.autocompleteOptions} />
             </div>
         </>
-
     )
-
 }
 

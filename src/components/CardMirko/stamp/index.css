@@ -10,8 +10,8 @@
 	background: radial-gradient(
 		transparent 0px, 
 		transparent 4px, 
-		white 4px,
-		white
+		rgb(255, 255, 255) 4px,
+		rgb(255, 255, 255)
 	);
 	
 	/*reducing the gradient size*/
