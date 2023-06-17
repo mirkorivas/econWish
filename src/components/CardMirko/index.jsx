@@ -114,7 +114,7 @@ export default function Card2({ user }) {
       <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: 1}}>
         <div className="addressee">
             <div className="studentName">{name}</div>
-            <div className="department">Economics Dept. {grade}</div>
+            <div className="department">{grade}</div>
         </div>
       </Box>
     )
@@ -147,27 +147,30 @@ export default function Card2({ user }) {
       </CardContent>
     )
   }
-  //<div className="sender">{date + " - " + sender}</div> //Not needed 
+  //<div className="sender">{date + " - " + sender}</div> //Not needed anymore
 
 
   function CardImgFull({ imgSrc, onClick }) {  
     return (
       <CardContent>
-      <div style={{ height: "100%", position: "relative" }}>
+      <div style={{ height: "483px", position: "relative" }}>
         <Image
+          onClick={onClick}
           duration={0}
           src={imgSrc}
           fit="cover"
+          position='center'
         />
         <IconButton
           aria-label="close"
           sx={{
             position: 'absolute',
-            color: (theme) => theme.palette.grey[500],
+            color: 'black',
             right: 8,
             top: 8
           }}
           onClick={onClick}
+          style={{outline: 'none', visibility: 'hidden'}}
         >
           <CloseIcon />
         </IconButton>
@@ -198,7 +201,6 @@ export default function Card2({ user }) {
       }
     };
     
-    //Still need to figure out what to do with the share button
     return (
       <div>
         <Addressee name={name} grade={grade}/>

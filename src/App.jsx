@@ -93,8 +93,6 @@ function AppContent({ users }) {
             return (
                 <GalleryItem key={i}>
                     <Card2 user={e} />
-                    {/* <Item sx={{height: "300px"}}/> */}
-                    {/* <Card user={e} style={style}/>   */}
                 </GalleryItem>
             )
         }
@@ -102,12 +100,14 @@ function AppContent({ users }) {
     return (
         <>
             <div className="main2">
+                <div style={{height:'5px'}}></div>  
                 <Gallery>
                     <>
                         {cards}
                         <div className="endCard" />
                     </>
                 </Gallery>
+                <div style={{height:'90px'}}></div>
             </div>
 
             <div className="footer2">

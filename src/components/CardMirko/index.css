@@ -31,7 +31,7 @@
     
     width: 228px;
     height: 103px;
-    
+    gap: 15px;
     
     /* Inside auto layout */
     flex: none;
@@ -49,9 +49,9 @@
     font-family: 'M PLUS 1';
     font-style: normal;
     font-weight: 400;
-    font-size: 40px;
+    font-size: 45px;
     line-height: 43px;
-    padding-top: 15px;
+    padding-top: 5px;
     
     color: #000000;
     text-align: center;
